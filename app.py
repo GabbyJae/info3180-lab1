@@ -18,10 +18,9 @@ def home():
     return 'My home page' 
 
 
-@app.errorhandler(404)
-def page_not_found(error):
-    """Custom 404 page."""
-    return render_template('404.html'), 404
+@app.route('/about')
+def about():
+ return render_template('about.html')
 
 
 if __name__ == '__main__':
